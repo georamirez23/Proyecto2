@@ -1,0 +1,68 @@
+/* Requisito: Centrar el contenido y Modo Oscuro (Bonus) */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #070707; /* Fondo oscuro */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal de la tira de luces */
+#luces-container {
+    display: flex;
+    gap: 15px; /* Espaciado entre luces */
+    padding: 20px;
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Diseño Responsivo Básico */
+    max-width: 90%;
+    overflow-x: auto;
+}
+
+/* Estilo para cada luz tamaño y efectos */
+.luz {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    /* Aumento de la transición a 0.5s para un cambio más suave y notorio */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    
+    /* Aumento de la intensidad y el radio de la sombra */
+    
+    box-shadow: 
+        0 0 10px 5px rgba(229, 229, 229, 0.951), /* Sombra blanca difusa */
+        0 0 25px 2px rgba(255, 255, 255, 0.2); /* Sombra más amplia y suave */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Contorno más visible */
+}
+
+/* Estilos para el Título y Contador */
+h1 {
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 5px #000;
+}
+
+
+#app {
+    
+   display: flex;
+    flex-direction: column; /* Organiza el contenido de #app verticalmente (título, contador, filas) */
+    align-items: center;
+ }
+
+/* El estilo de #luces-container se convierte en el estilo de una sola fila */
+.fila-luces { /* Nueva clase para cada una de las 5 filas */
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background-color: #040000;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    margin-bottom: 20px; /* Espacio entre las filas */
+    overflow-x: auto;
+}
